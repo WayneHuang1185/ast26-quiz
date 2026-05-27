@@ -6,7 +6,7 @@ question: |
   （Hard LDPC）完成。
   已知：
   - 每個 ECC codeword 大小為 $2 \times 10^4$ bits，並且每個 Read Request 的大小剛好等同於一個 ECC codeword。
-  - codeword 內 bit error 可視為獨立發生，當UBER 很小時
+  - codeword 內 bit error 可視為獨立發生，當 UBER 很小時
    $P_{\text{codeword fail}} \approx \text{codeword size} \times \text{UBER}$。
   
   下表為不同 RBER 下，Hard LDPC 解碼後的 UBER：
@@ -16,7 +16,7 @@ question: |
   | $2.0 \times 10^{-3}$ | $8 \times 10^{-9}$ |
   | $2.5 \times 10^{-3}$ | $3 \times 10^{-8}$ |
   | $3.0 \times 10^{-3}$ | $2 \times 10^{-7}$ |
-  
+
   為了滿足 SLA，Soft LDPC 最晚應該在 RBER 超過哪個值時觸發？
 options:
   - text: "當 RBER 大於 $2.0 \times 10^{-3}$ 時觸發 Soft LDPC"
@@ -25,7 +25,7 @@ options:
       客戶要求 99.95% 的 read request 必須在 single read 後完成，因此最多只有 $100\% - 99.95\% = 0.05\%$ 的 read request 可以進入 Soft LDPC path。
       將 $0.05\%$ 轉成機率後是 $0.05\% = 0.0005 = 5 \times 10^{-4}$。
       所以 Hard LDPC 的 codeword failure probability 必須滿足 $P_{\text{codeword fail}} \le 5 \times 10^{-4}$。
-      題目給定一個 codeword 大小為 $2 \times 10^4$ bits，而因為UBER是很小的數字，所以可以用用題目給的近似$P_{\text{codeword fail}} \approx \text{codeword size} \times \text{UBER}$ 來計算。
+      題目給定一個 codeword 大小為 $2 \times 10^4$ bits，而因為 UBER 是很小的數字，所以可以用用題目給的近似$P_{\text{codeword fail}} \approx \text{codeword size} \times \text{UBER}$ 來計算。
       因此 UBER 必須滿足：
       $$2 \times 10^4 \times \text{UBER} \le 5 \times 10^{-4}
       \Rightarrow\text{UBER} \le \frac{5 \times 10^{-4}}{2 \times 10^4}
