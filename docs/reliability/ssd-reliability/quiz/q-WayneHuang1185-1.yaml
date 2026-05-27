@@ -16,7 +16,7 @@ question: |
   | $2.5 \times 10^{-3}$ | $3 \times 10^{-8}$ |
   | $3.0 \times 10^{-3}$ | $2 \times 10^{-7}$ |
   請問為了滿足客戶需求，Soft LDPC 最晚應該在什麼 RBER 之後被觸發？
-  options:
+options:
   - text: "當 RBER 大於 $2.0 \times 10^{-3}$ 時觸發 Soft LDPC"
     correct: true
     explanation: |
